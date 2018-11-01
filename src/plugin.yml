@@ -1,0 +1,7 @@
+name: RolePlayChat
+version: 1.0
+author: Nathanael2611
+main: fr.nathanael2611.roleplaychat.RolePlayChat
+commands:
+  roleplaychat:
+    description: RolePlayChat command

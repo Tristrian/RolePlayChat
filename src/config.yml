@@ -1,0 +1,12 @@
+miscs:
+  prefix: '§6[RolePlayChat]'
+prefix:
+  shout: '!'
+  whisp: '$'
+  hrp: '('
+  action: '*'
+distance:
+  speak: 15
+  shout: 30
+  whisp: 3
+  action: 10

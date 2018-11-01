@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="bukkit-1.12.2-R0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../KyrgonPL/bukkit-1.12.2-R0.1-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
