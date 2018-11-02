@@ -61,9 +61,27 @@ public class RPChatListener implements Listener {
 
         if(firstchar.equals(hrpprefix)) {
 
-            String x1 = getConfig.getString("format.hrp").replace("{player}", displayname).replace("{rpname}", name);;
-            String x2 = x1.replace("{message}", msg);
-            Bukkit.broadcastMessage(x2);
+            String x1;
+            x1 = getConfig.getString("format.hrp");
+            if(x1.contains("{player}")){
+
+                x1 = x1.replace("{player}", displayname);
+            }else{
+                x1 = x1;
+            }
+            if(x1.contains("{rpname}")){
+                x1 = x1.replace("{rpname}", name);
+
+            }else{
+                x1 = x1;
+            }
+            if(x1.contains("{message}")){
+                x1 = x1.replace("{message}", msg);
+
+            }else{
+                x1 = x1;
+            }
+            Bukkit.broadcastMessage(x1);
         }else if(firstchar.equals(shoutprefix)) {
             for (Player pl : e.getRecipients()) {
                 if(checkDistance(pl.getLocation(), playerLoc, shoutdist) == true){
@@ -71,9 +89,26 @@ public class RPChatListener implements Listener {
                 }
             }
             for (Player pll : playerHearList) {
-                String x1 = getConfig.getString("format.shout").replace("{rpname}", name).replace("{player}", displayname);;
-                String x2 = x1.replace("{message}", msg);
-                pll.sendMessage(x2);
+                String x1 = getConfig.getString("format.shout");
+                if(x1.contains("{player}")){
+
+                    x1 = x1.replace("{player}", displayname);
+                }else{
+                    x1 = x1;
+                }
+                if(x1.contains("{rpname}")){
+                    x1 = x1.replace("{rpname}", name);
+
+                }else{
+                    x1 = x1;
+                }
+                if(x1.contains("{message}")){
+                    x1 = x1.replace("{message}", msg);
+
+                }else{
+                    x1 = x1;
+                }
+                pll.sendMessage(x1);
             }
         }else if(firstchar.equals(whispprefix)) {
             for (Player pl : e.getRecipients()) {
@@ -82,9 +117,26 @@ public class RPChatListener implements Listener {
                 }
             }
             for (Player pll : playerHearList) {
-                String x1 = getConfig.getString("format.whisp").replace("{rpname}", name).replace("{player}", displayname);;
-                String x2 = x1.replace("{message}", msg);
-                pll.sendMessage(x2);
+                String x1 = getConfig.getString("format.whisp");
+                if(x1.contains("{player}")){
+
+                    x1 = x1.replace("{player}", displayname);
+                }else{
+                    x1 = x1;
+                }
+                if(x1.contains("{rpname}")){
+                    x1 = x1.replace("{rpname}", name);
+
+                }else{
+                    x1 = x1;
+                }
+                if(x1.contains("{message}")){
+                    x1 = x1.replace("{message}", msg);
+
+                }else{
+                    x1 = x1;
+                }
+                pll.sendMessage(x1);
             }
         }else if(firstchar.equals(actionprefix)) {
             for (Player pl : e.getRecipients()) {
@@ -93,9 +145,26 @@ public class RPChatListener implements Listener {
                 }
             }
             for (Player pll : playerHearList) {
-                String x1 = getConfig.getString("format.action").replace("{rpname}", name).replace("{player}", displayname);;
-                String x2 = x1.replace("{message}", msg);
-                pll.sendMessage(x2);
+                String x1 = getConfig.getString("format.action");
+                if(x1.contains("{player}")){
+
+                    x1 = x1.replace("{player}", displayname);
+                }else{
+                    x1 = x1;
+                }
+                if(x1.contains("{rpname}")){
+                    x1 = x1.replace("{rpname}", name);
+
+                }else{
+                    x1 = x1;
+                }
+                if(x1.contains("{message}")){
+                    x1 = x1.replace("{message}", msg);
+
+                }else{
+                    x1 = x1;
+                }
+                pll.sendMessage(x1);
             }
         }else {
             for (Player pl : e.getRecipients()) {
@@ -105,9 +174,30 @@ public class RPChatListener implements Listener {
             }
             for (Player pll : playerHearList) {
 
-                String x1 = getConfig.getString("format.speak").replace("{rpname}", name).replace("{player}", displayname);;
-                String x2 = x1.replace("{message}", message);
-                pll.sendMessage(x2);
+                String x1;
+
+                x1 = getConfig.getString("format.speak");;
+
+                if(x1.contains("{player}")){
+
+                    x1 = x1.replace("{player}", displayname);
+                }else{
+                    x1 = x1;
+                }
+                if(x1.contains("{rpname}")){
+                    x1 = x1.replace("{rpname}", name);
+
+                }else{
+                    x1 = x1;
+                }
+                if(x1.contains("{message}")){
+                    x1 = x1.replace("{message}", message);
+
+                }else{
+                    x1 = x1;
+                }
+
+                pll.sendMessage(x1);
             }
         }
 

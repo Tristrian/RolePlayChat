@@ -1,7 +1,6 @@
 package fr.nathanael2611.roleplaychat.commands;
 
 import fr.nathanael2611.roleplaychat.RolePlayChat;
-import net.milkbowl.vault.Vault;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -24,8 +23,9 @@ public class RPName implements CommandExecutor {
             StringBuilder sb = new StringBuilder();
             int i;
             for (i = 0; i < args.length; i++) {
-                sb.append(args[i]);
                 sb.append(" ");
+                sb.append(args[i]);
+
 
             }
 
