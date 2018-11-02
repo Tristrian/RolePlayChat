@@ -10,3 +10,9 @@ distance:
   shout: 30
   whisp: 3
   action: 10
+format:
+  speak: '§7{rpname} §rdit: {message}'
+  shout: '§7{rpname} §4crie: {message}'
+  whisp: '$7{rpname} §2chuchotte: {message}'
+  action: '§c§o{rpname} {message}'
+  hrp: '$7{rpname} ({player}) §r[HRP]: §7§o{message}'

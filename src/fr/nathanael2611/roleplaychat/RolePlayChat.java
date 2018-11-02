@@ -1,5 +1,6 @@
 package fr.nathanael2611.roleplaychat;
 
+import fr.nathanael2611.roleplaychat.commands.RPName;
 import fr.nathanael2611.roleplaychat.commands.RolePlayChatCommand;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -14,6 +15,7 @@ public class RolePlayChat extends JavaPlugin {
 
     public static RolePlayChat instance;
 
+    public FileConfiguration rpnames = new YamlConfiguration().loadConfiguration(getFile("config"));
 
 
     public void onEnable(){
@@ -23,16 +25,12 @@ public class RolePlayChat extends JavaPlugin {
 
         saveDefaultConfig();
         getCommand("roleplaychat").setExecutor(new RolePlayChatCommand());
+        getCommand("rpname").setExecutor(new RPName());
         System.out.println(getConfig().getShortList("miscs.prefix"));
 
-        /*createFile("config");
 
-        FileConfiguration config = new YamlConfiguration().loadConfiguration(getFile("config"));
-        try {
-            config.save(getFile("config"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
+
+
         System.out.println("RolePlayChat >> ON");
 
     }
@@ -41,7 +39,7 @@ public class RolePlayChat extends JavaPlugin {
 
 
 
-    /*public void onDisable(){
+    public void onDisable(){
 
         System.out.println("RolePlayChat >> OFF");
 
@@ -63,7 +61,7 @@ public class RolePlayChat extends JavaPlugin {
         }
     }
 
-    private File getFile(String filename){
+    public File getFile(String filename){
         return new File(getDataFolder(), filename+".yml");
-    }*/
+    }
 }
